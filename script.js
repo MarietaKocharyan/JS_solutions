@@ -5,4 +5,5 @@
           alert("failed");
       }
     }
-    multiple(21); //10,3
+    
+multiple(21); //10,3
