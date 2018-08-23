@@ -1,4 +1,4 @@
-function multiple(x) {
-   ((x % 3 == 0) || (x % 7 == 0)) ? alert("check") : alert("failed");
+function triangle(x, y) {
+       return 1/2*x*y;
 }
-multiple(21); //10,3
+  console.log(triangle(3, 5));
