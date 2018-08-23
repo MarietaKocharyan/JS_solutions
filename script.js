@@ -1,4 +1,6 @@
-function multiple(x) {
-   ((x % 3 == 0) || (x % 7 == 0)) ? alert("check") : alert("failed");
+function sum(x, y) {
+     return (x !== y)
+         ? x + y
+         : 6 * x;
 }
-multiple(21); //10,3
+sum(4, 5);
