@@ -8,4 +8,3 @@ function triangle(x, y) {
      return 1/2*x*y;
 }
 triangle(3, 5);
-//oka? estex es?
