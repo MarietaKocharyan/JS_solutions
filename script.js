@@ -15,3 +15,12 @@ function multiple(x) {
        : "failed";
 }
 multiple(21);
+
+function tempconvert(celsius) {
+    return (5/9 * (celsius - 32));
+}
+function celconvert(temperatures) {
+    return(9/5 * temperatures + 32);
+}
+tempconvert(5);
+celconvert(17);
