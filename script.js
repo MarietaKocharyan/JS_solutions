@@ -8,3 +8,10 @@ function triangle(x, y) {
      return 1/2*x*y;
 }
 triangle(3, 5);
+
+function multiple(x) {
+   return ((x % 3 == 0) || (x % 7 == 0))
+       ? "check"
+       : "failed";
+}
+multiple(21);
