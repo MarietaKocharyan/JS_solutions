@@ -25,18 +25,6 @@ function celconvert(temperatures) {
 tempconvert(5);
 celconvert(17);
 
-let name = "Jane";
-console.log(name.toUpperCase);
-let number = 12.5;
-console.log(number.toFixed(1));
-let a = NaN; //prompt("Write a number", "");
-/*if (isNaN(a)) {
-    console.log("This is string");
-}else {
-    console.log("This is number");
-}*/
-console.log(Math.floor(number));
-
 function fibon(n) {
     let a = 1,
         b = 0,
@@ -47,26 +35,22 @@ function fibon(n) {
         b = x;
     }
     return b;
-
 }
-
-let  sub = "Example";console.log(fibon(9));
-console.log(sub.substring(1, -4));
+/*let  sub = "Example";console.log(fibon(9));
+console.log(sub.substring(1, -4));*/
 
 function ucFirst(number) {
     console.log(number[0].toUpperCase() + number.slice(1));
 }
 ucFirst("ajfiua");
 
-
 function checkSpam(str) {
     if (~str.indexOf('XXX') || ~str.indexOf("viagra") ) {
-        console.log(true);
+        return true;
     }else {
-        console.log(false);
+        false;
     }
 }
-
 checkSpam("XXXaffafaef");
 checkSpam("hfoih");
 checkSpam("Viagrahohasf");
@@ -77,12 +61,10 @@ function isEmpty(obj) {
         return true ;
 } false;
 let shcedule = {};
+    isEmpty(shcedule);
+    shcedule["Wek up"] = "at 8:30 pm";
 
-console.log(isEmpty(shcedule));
-
-shcedule["Wek up"] = "at 8:30 pm";
-
-console.log(isEmpty(shcedule));
+isEmpty(shcedule);
 
 let salaries = {
     "Emma": 100,
@@ -99,10 +81,6 @@ for (key in salaries) {
         maxname = key;
     }
 }
-console.log( value );
-
-console.log(key || "No one");
-
 var menu = {
     width: 200,
     height: 300,
@@ -120,8 +98,7 @@ let clone = {};
 for ( key in user ) {
     clone[key] = user[key]
 };
-
-console.log(clone[key]);
+clone[key];
 
 let nameOf = [];
 nameOf[0] = "apple";
@@ -130,43 +107,24 @@ nameOf.age = 25;
 nameOf[999999] = "Banananna";
 nameOf.push("one");
 
-console.log( nameOf );
-
 function eat(arr) {
     arr.pop();
 }
-
-var arr = ["This", "is", "JavaScript", "baby", "!"]
-
-console.log( arr.length );  //5
-
-eat(arr);
-eat(arr);
-
-console.log( arr.length ); //3  why here is 3?
+let arr = ["This", "is", "JavaScript", "baby", "!"]
+        console.log( arr.length );  //5
+    eat(arr);
+    eat(arr);
+        console.log( arr.length ); //3  why here is 3?
 
 let newArray = [ "One", "Two", "Three"];
 let countarray = newArray[newArray.length - 1];
 newArray.push("Four");
-
-console.log(countarray);
-
-console.log(newArray);
-
-let styles = [ "Jazz", "Blues"];
-styles.push("Roj&Roll");
-styles[styles.length - 2 ] = "Classic";
-styles.shift();
-
-console.log(styles);
-
-styles.unshift("Rep", "Reggi");
-
-console.log(styles);
-
+    let styles = [ "Jazz", "Blues"];
+    styles.push("Roj&Roll");
+      styles[styles.length - 2 ] = "Classic";
+        styles.shift();
+        styles.unshift("Rep", "Reggi");
 let rand = styles[Math.floor(Math.random() * styles.length)];
-console.log(rand);
-
 arr = ["test", 2, 1.5, false];
 function find(arr, value) {
     for ( let i = 0; i < arr.length; i++) {
@@ -177,27 +135,34 @@ function find(arr, value) {
     return "-1"
 }
 find(arr, 2);
-console.log(find(arr, value));
-
+    console.log(find(arr, value));
 let names = "Helen, Jasmine, Georgi";
-
 let arrs = names.split(", ", 2);
 for ( let i = 0; i < arrs.length; i++) {
-    console.log( "You hahve massege " + arrs[i] );
+    return arrs[i];
 }
-
 let obj = {
     className: "Open menu"
 };
 function addClass(obj, cls) {
     let classes= obj.calssName ? obj.clasName.split() : [];
-    for (let i = 0; i < obj.length; i++) {
-        if (classes[i] == cls) return;
+       for (let i = 0; i < obj.length; i++) {
+           if (classes[i] == cls) return;
     }
-    classes.push(cls);
-    obj.className = classes.join( ' ');
+        classes.push(cls);
+        obj.className = classes.join( ' ');
 }
 addClass(obj, 'new');
 addClass(obj, 'open');
 addClass(obj, 'me');
-console.log(obj.className);
+//console.log(obj.className);
+
+function camelize(str) {
+    let  newStr = str.split('-');
+    for (let i = 0 ; i < newStr.length; i++) {
+        newStr[i] = newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1);
+    }
+    return newStr.join( " ");
+}
+camelize("background-color");
+camelize("list-style-image");
