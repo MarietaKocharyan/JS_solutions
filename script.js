@@ -25,7 +25,7 @@ function celconvert(temperatures) {
 tempconvert(5);
 celconvert(17);
 
-function fibon(n) {
+/*function fibon(n) {
     let a = 1,
         b = 0,
         x;
@@ -38,7 +38,6 @@ function fibon(n) {
 }
 /*let  sub = "Example";console.log(fibon(9));
 console.log(sub.substring(1, -4));*/
-
 function ucFirst(number) {
     console.log(number[0].toUpperCase() + number.slice(1));
 }
@@ -139,7 +138,7 @@ find(arr, 2);
 let names = "Helen, Jasmine, Georgi";
 let arrs = names.split(", ", 2);
 for ( let i = 0; i < arrs.length; i++) {
-    return arrs[i];
+  //  return arrs[i];
 }
 let obj = {
     className: "Open menu"
@@ -166,3 +165,14 @@ function camelize(str) {
 }
 camelize("background-color");
 camelize("list-style-image");
+
+let arrnumber =[ 5, 3, 8, 1];
+function filterRangeInPlace(arrnumber, a, b) {
+    for (let i = 0; i < arrnumber.length; i++) {
+        if (arrnumber[i] < a || arrnumber[i] > b) {
+            arrnumber.splice(i--, 1);
+        }
+    }
+}
+filterRangeInPlace(arrnumber, 1, 4);
+    console.log(arrnumber);
