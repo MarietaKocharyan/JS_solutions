@@ -177,16 +177,14 @@ perform(4);
 //https://trello.com/c/g6YWEuzQ/35-write-a-bubble-sort-algorithm-in-javascript
 function bubble_Sort(a)
 {
-    var swapp;
-    var n = a.length-1;
-    var x=a;
+    let swapp;
+    let n = a.length-1;
+    let x=a;
     do {
         swapp = false;
-        for (var i=0; i < n; i++)
-        {
-            if (x[i] < x[i+1])
-            {
-               var temp = x[i];
+        for (let i=0; i < n; i++) {
+            if (x[i] < x[i+1]) {
+               let temp = x[i];
                x[i] = x[i+1];
                x[i+1] = temp;
                swapp = true;
@@ -197,4 +195,4 @@ function bubble_Sort(a)
  return x;
 }
 
-console.log(bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
