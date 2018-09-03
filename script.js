@@ -5,7 +5,7 @@ function sum(x, y) {
 }
 sum(4, 5);
 function triangle(x, y) {
-    return 1/2*x*y;
+    return 1/2 * x * y;
 }
 triangle(3, 5);
 
@@ -25,19 +25,6 @@ function celconvert(temperatures) {
 tempconvert(5);
 celconvert(17);
 
-/*function fibon(n) {
-    let a = 1,
-        b = 0,
-        x;
-    for (i = 0 ; i < n; i++) {
-        x = a + b;
-        b = a;
-        b = x;
-    }
-    return b;
-}
-/*let  sub = "Example";console.log(fibon(9));
-console.log(sub.substring(1, -4));*/
 function ucFirst(number) {
     console.log(number[0].toUpperCase() + number.slice(1));
 }
@@ -54,7 +41,6 @@ checkSpam("XXXaffafaef");
 checkSpam("hfoih");
 checkSpam("Viagrahohasf");
 
-//let continue = 0;
 function isEmpty(obj) {
     for (key in shcedule)
         return true ;
@@ -175,7 +161,7 @@ function filterRangeInPlace(arrnumber, a, b) {
     }
 }
 filterRangeInPlace(arrnumber, 1, 4);
-console.log(arrnumber);
+console.log(arrnumber);g
 
 // https://trello.com/c/5BW0Zuik/32-write-a-javascript-program-to-perform-a-binary-search-of-each-element
 let nameBinar = [2, 4, 5, 1, 52, 43]
@@ -189,4 +175,3 @@ function perform(nameBinar, argument) {
     }
 }
  perform(4);
-
