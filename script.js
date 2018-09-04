@@ -247,3 +247,13 @@ function removeofduplicate(numberofdup) {
 };
 let array00 = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
 console.log(removeofduplicate(array00));
+//https://trello.com/c/nJzvNaY7/34-write-a-javascript-function-to-get-a-part-of-a-string-before-a-specified-character
+function stringofarray(arrayofstring, first, second) {
+    if ( second == 'x') {
+        return arrayofstring.substring(arrayofstring.indexOf(first));
+    }else if ( second == 'y') {
+        return arrayofstring.substring(0, arrayofstring.indexOf(first));
+    }else {
+        return arrayofstring;
+    }
+}
