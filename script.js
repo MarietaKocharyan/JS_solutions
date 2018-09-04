@@ -26,7 +26,7 @@ tempconvert(5);
 celconvert(17);
 
 function ucFirst(number) {
-    console.log(number[0].toUpperCase() + number.slice(1));
+   // console.log(number[0].toUpperCase() + number.slice(1));
 }
 ucFirst("ajfiua");
 
@@ -96,10 +96,10 @@ function eat(arr) {
     arr.pop();
 }
 let arr = ["This", "is", "JavaScript", "baby", "!"]
-console.log( arr.length );  //5
+//console.log( arr.length );  //5
 eat(arr);
 eat(arr);
-console.log( arr.length ); //3  why here is 3?
+//console.log( arr.length ); //3  why here is 3?
 
 let newArray = [ "One", "Two", "Three"];
 let countarray = newArray[newArray.length - 1];
@@ -120,7 +120,7 @@ function find(arr, value) {
     return "-1"
 }
 find(arr, 2);
-console.log(find(arr, value));
+//console.log(find(arr, value));
 let names = "Helen, Jasmine, Georgi";
 let arrs = names.split(", ", 2);
 for ( let i = 0; i < arrs.length; i++) {
@@ -161,7 +161,7 @@ function filterRangeInPlace(arrnumber, a, b) {
     }
 }
 filterRangeInPlace(arrnumber, 1, 4);
-console.log(arrnumber);
+//console.log(arrnumber);
 // https://trello.com/c/5BW0Zuik/32-write-a-javascript-program-to-perform-a-binary-search-of-each-element
 let nameBinar = [2, 4, 5, 1, 52, 43]
 function perform(nameBinar, argument) {
@@ -174,3 +174,53 @@ function perform(nameBinar, argument) {
     }
 }
 perform(4);
+//https://trello.com/c/g6YWEuzQ/35-write-a-bubble-sort-algorithm-in-javascript
+function bubble_Sort(a) {
+    let swapp;
+    let n = a.length-1;
+    let x=a;
+    do {
+        swapp = false;
+        for (let  i=0; i < n; i++) {
+            if (x[i] < x[i+1]) {
+               let temp = x[i];
+               x[i] = x[i+1];
+               x[i+1] = temp;
+               swapp = true;
+            }
+        }
+        n--;
+    } while (swapp);
+ return x;
+};
+bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]);
+
+//https://trello.com/c/3FCZSbg7/33-write-a-javascript-function-to-find-the-difference-of-two-arrays
+function difference(first, second) {
+    let value = [];
+    for ( let i = 0; i < first.length; i++) {
+        for (let j = 0; j < second.length; j++) {
+            if (first[i] == second[j]) {
+                value.push ( first[i] )
+            }
+        }
+    }
+    return value;
+}
+console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+
+function differenceOf2Arrays (array1, array2) {
+    let temp = [];
+    array1 = array1.toString().split(',').map(Number);
+    array2 = array2.toString().split(',').map(Number);
+         for (let in array1) {
+             if (array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
+        }
+         for(i in array2) {
+            if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
+         }
+     return temp.sort((a,b) => a-b);
+}
+console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
+
+
