@@ -213,14 +213,24 @@ function differenceOf2Arrays (array1, array2) {
     let temp = [];
     array1 = array1.toString().split(',').map(Number);
     array2 = array2.toString().split(',').map(Number);
-         for (let in array1) {
-             if (array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
+     for (let in array1) {
+               if (array2.indexOf(array1[i]) === -1) temp.push(array1[i]);
         }
-         for(i in array2) {
-            if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
-         }
-     return temp.sort((a,b) => a-b);
+        for(i in array2) {
+           if(array1.indexOf(array2[i]) === -1) temp.push(array2[i]);
+        }
+   return temp.sort((a,b) => a-b);
 }
-console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
-
-
+//console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
+//https://trello.com/c/TxzxC2cA/30-write-a-javascript-program-to-compute-the-sum-and-product-of-an-array-of-integer
+function sumofnumber(arrayforSum) {
+    let arrayforSum = [1, 4, 5, 6];
+    let sumofn = 0;
+    let powofn = 1;
+    let i;
+    for (i = 0; i < arrayforSum.length; i++ ) {
+        sumofn += arrayforSum[i];
+        powofn *= arrayforSum[i];
+    }
+   console.log('Sum : '+sumofn + ' Product :  ' +powofn);
+};
