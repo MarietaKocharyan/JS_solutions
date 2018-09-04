@@ -249,5 +249,4 @@ console.log(removeofduplicate(array00));
 //https://trello.com/c/nJzvNaY7/34-write-a-javascript-function-to-get-a-part-of-a-string-before-a-specified-character
 function stringofarray(arrayofstring, argument) {
         return arrayofstring.substring(0, arrayofstring.indexOf(argument));
-}
-console.log(stringofarray('lorem: javaScript', ':'));
+};
