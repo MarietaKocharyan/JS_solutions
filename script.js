@@ -234,3 +234,16 @@ function sumofnumber(arrayforSum) {
     }
    console.log('Sum : '+sumofn + ' Product :  ' +powofn);
 };
+//https://trello.com/c/SmZnXqC1/31-write-a-javascript-program-to-remove-duplicate-items-from-an-array
+function removeofduplicate(numberofdup) {
+    for (let i = 0; i < numberofdup.length; i++){
+        for (let j = 0; j < numberofdup.length; j++){
+            if (numberofdup[i] == numberofdup[j]) {
+                numberofdup= numberofdup.push(array00[i]);
+                return numberofdup;
+            }
+        }
+    }
+};
+let array00 = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+console.log(removeofduplicate(array00));
