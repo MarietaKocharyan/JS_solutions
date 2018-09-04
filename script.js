@@ -223,17 +223,16 @@ function differenceOf2Arrays (array1, array2) {
 }
 //console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
 //https://trello.com/c/TxzxC2cA/30-write-a-javascript-program-to-compute-the-sum-and-product-of-an-array-of-integer
-function sumofnumber(arrayforSum) {
-    let arrayforSum = [1, 4, 5, 6];
-    let sumofn = 0;
-    let powofn = 1;
-    let i;
-    for (i = 0; i < arrayforSum.length; i++ ) {
-        sumofn += arrayforSum[i];
-        powofn *= arrayforSum[i];
-    }
-   console.log('Sum : '+sumofn + ' Product :  ' +powofn);
-};
+var array = [1, 2, 3, 4, 5, 6],
+    s = 0,
+    p = 1,
+    i;
+for (i = 0; i < array.length; i += 1)
+{
+    s += array[i];
+    p *= array[i];
+}
+console.log('Sum : '+s + ' Product :  ' +p);
 //https://trello.com/c/SmZnXqC1/31-write-a-javascript-program-to-remove-duplicate-items-from-an-array
 function removeofduplicate(numberofdup) {
     for (let i = 0; i < numberofdup.length; i++){
@@ -248,12 +247,7 @@ function removeofduplicate(numberofdup) {
 let array00 = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
 console.log(removeofduplicate(array00));
 //https://trello.com/c/nJzvNaY7/34-write-a-javascript-function-to-get-a-part-of-a-string-before-a-specified-character
-function stringofarray(arrayofstring, first, second) {
-    if ( second == 'x') {
-        return arrayofstring.substring(arrayofstring.indexOf(first));
-    }else if ( second == 'y') {
-        return arrayofstring.substring(0, arrayofstring.indexOf(first));
-    }else {
-        return arrayofstring;
-    }
+function stringofarray(arrayofstring, argument) {
+        return arrayofstring.substring(0, arrayofstring.indexOf(argument));
 }
+console.log(stringofarray('lorem: javaScript', ':'));
