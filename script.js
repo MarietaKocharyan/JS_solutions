@@ -207,8 +207,6 @@ function difference(first, second) {
     }
     return value;
 }
-console.log(difference([1, 2, 3], [100, 2, 1, 10]));
-
 function differenceOf2Arrays (array1, array2) {
     let temp = [];
     array1 = array1.toString().split(',').map(Number);
@@ -223,7 +221,7 @@ function differenceOf2Arrays (array1, array2) {
 }
 //console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
 //https://trello.com/c/TxzxC2cA/30-write-a-javascript-program-to-compute-the-sum-and-product-of-an-array-of-integer
-var array = [1, 2, 3, 4, 5, 6],
+let array = [1, 2, 3, 4, 5, 6],
     s = 0,
     p = 1,
     i;
@@ -232,20 +230,17 @@ for (i = 0; i < array.length; i += 1)
     s += array[i];
     p *= array[i];
 }
-console.log('Sum : '+s + ' Product :  ' +p);
 //https://trello.com/c/SmZnXqC1/31-write-a-javascript-program-to-remove-duplicate-items-from-an-array
-function removeofduplicate(numberofdup) {
-    for (let i = 0; i < numberofdup.length; i++){
-        for (let j = 0; j < numberofdup.length; j++){
-            if (numberofdup[i] == numberofdup[j]) {
-                numberofdup= numberofdup.push(array00[i]);
-                return numberofdup;
-            }
+function removeDuplicates(arr){
+    let unique_array = []
+    for(let i = 0;i < arr.length; i++){
+        if(unique_array.indexOf(arr[i]) == -1){
+            unique_array.push(arr[i])
         }
     }
+    return unique_array
 };
-let array00 = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
-console.log(removeofduplicate(array00));
+//console.log(removeDuplicates([1, 2, 5, 1, 6, 8, 5]));
 //https://trello.com/c/nJzvNaY7/34-write-a-javascript-function-to-get-a-part-of-a-string-before-a-specified-character
 function stringofarray(arrayofstring, argument) {
         return arrayofstring.substring(0, arrayofstring.indexOf(argument));
