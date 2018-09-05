@@ -232,13 +232,13 @@ for (i = 0; i < array.length; i += 1)
 }
 //https://trello.com/c/SmZnXqC1/31-write-a-javascript-program-to-remove-duplicate-items-from-an-array
 function removeDuplicates(arr){
-    let unique_array = []
+    let uniqueArray = []
     for(let i = 0;i < arr.length; i++){
-        if(unique_array.indexOf(arr[i]) == -1){
-            unique_array.push(arr[i])
+        if(uniqueArray.indexOf(arr[i]) == -1){
+            uniquAarray.push(arr[i])
         }
     }
-    return unique_array
+    return uniqueArray
 };
 //console.log(removeDuplicates([1, 2, 5, 1, 6, 8, 5]));
 //https://trello.com/c/nJzvNaY7/34-write-a-javascript-function-to-get-a-part-of-a-string-before-a-specified-character
